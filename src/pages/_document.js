@@ -9,7 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>          
+        </Head>
         <body>
           <Main />
           <NextScript />
