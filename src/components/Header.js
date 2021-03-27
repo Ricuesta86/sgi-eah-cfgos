@@ -1,5 +1,6 @@
-import React from 'react'
+
 import Link from 'next/link'
+import styles from '../styles/Header.module.scss' 
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
         <div className="container">
           <Link href="/">
             <a className="navbar-brand">
+              <img src="/icon.jpg" alt="Logo" className={styles.logo}/>
               EAH Cfgos
             </a>
           </Link>
@@ -37,7 +39,7 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                <a className="nav-link disabled" href="#" aria-disabled="true">
                   Disabled
                 </a>
               </li>
