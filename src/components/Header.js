@@ -1,6 +1,5 @@
-
 import Link from 'next/link'
-import styles from '../styles/Header.module.scss' 
+import styles from '../styles/Header.module.scss'
 
 const Header = () => {
   return (
@@ -9,7 +8,7 @@ const Header = () => {
         <div className="container">
           <Link href="/">
             <a className="navbar-brand">
-              <img src="/icon.jpg" alt="Logo" className={styles.logo}/>
+              <img src="/icon.jpg" alt="Logo" className={styles.logo} />
               EAH Cfgos
             </a>
           </Link>
@@ -28,20 +27,26 @@ const Header = () => {
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
+              <li className="nav-item">
+                <Link href="http://www.cfg.giat.cu">
+                  <a className="nav-link" target="blank">
+                    Intranet
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
+                <Link href="https://correo.cfg.giat.cu">
+                  <a className="nav-link" target="blank">
+                    Correo
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="#" aria-disabled="true">
-                  Disabled
-                </a>
+                <Link href="http://cmi.cfg.giat.cu">
+                  <a className="nav-link" target="blank">
+                    CMI
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

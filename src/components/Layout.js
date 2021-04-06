@@ -11,7 +11,7 @@ const Main = ({ children }) => {
       <div className={`container-fluir ${styles.container_img}`}>
           <img src="/logo.jpg" alt="" className={`img-fluid ${styles.imagen}`}/>
       </div>
-      <div className="container">
+      <div className="container-fluid">
         { children }
       </div>
       <Footer />
