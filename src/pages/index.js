@@ -1,31 +1,32 @@
+import { Information } from 'components/Information'
 import Main from 'components/Layout'
 import { categorias } from '../profiles'
 
 const index = () => {
   return (
     <Main>
-      <h1 className="py-3 text-center">Bienvenido al portal de Sistema Integrado de Gestión de la Empresa de Aprovechamiento Hidráulicos Cienfuegos</h1>
-      <div className="row justify-center">
+      <div className="row">
+      <div className="col-8 py-5"> 
+           <div className="row contenido">
         {categorias.map((categoria, key) => {
           return (
-            <div className="col-3 p-2 m-2 card ">
-              <h3 key={key}>{categoria.nombre}</h3>
+            <div className="col-3 card p-2 ">
+              <p key={key}>{categoria.nombre}</p>
             </div>
           )
         })}
       </div>
+      </div>
+      <div className="col-4 py-5">
+          <Information />
+      </div>
+
+        
+      </div>
+
       
       <style jsx>
         {`
-          .grid {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin-top: 3rem;
-          }
-
           .card:hover,
           .card:focus,
           .card:active {
@@ -36,10 +37,18 @@ const index = () => {
             margin: 0 0 1rem 0;
             font-size: 1.5rem;
           }
+
+          .card{
+            margin: 5px;
+          }
+
           .card p {
-            margin: 0;
-            font-size: 1.25rem;
+            margin: 0px;
+            font-size: 1rem;
             line-height: 1.5;
+          }
+          .contenido{
+            justify-content:center;
           }
         `}
       </style>
