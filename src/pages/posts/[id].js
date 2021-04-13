@@ -10,13 +10,14 @@ const Post = () => {
     // if(router.isFallback){
     //     return <div className="cargando">Cargando... </div>
     // }
-    const { nombre, contenido } = categorias.filter(categoria=>categoria.id==router.query.id);
+    // const { nombre, contenido } = categorias.filter(categoria=>categoria.id==router.query.id);
+    const post = categorias.filter(categoria=>categoria.id==router.query.id);
     //  console.log(post);
 
     return (
         <Segundario>
-            <h2> { nombre } </h2>
-            <h1>Hola</h1>
+            <h2> { post[0].nombre } </h2>
+            <p>{post[0].contenido}</p>
         </Segundario>
     )
 };
