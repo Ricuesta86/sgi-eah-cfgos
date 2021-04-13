@@ -50,10 +50,10 @@ const index = () => {
       <div className="row contenido">
         {categorias.map((categoria, key) => {
           return (
-            <div className="col-3 card p-2 ">
+            <div className="col-3 card p-2 " key={key} >
               <Link href={`/posts/${categoria.id}`}>
                 <a>
-                  <p key={key}>{categoria.nombre}</p>
+                  <p >{categoria.nombre}</p>
                 </a>
               </Link>
             </div>
