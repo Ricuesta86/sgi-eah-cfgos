@@ -7,8 +7,8 @@ const Posts = () => {
     <Principal>
       {categorias.map((categoria, key) => {
         return (
-          <div className="p-2">
-                <h3 key={key}>{categoria.nombre}</h3>
+          <div className="p-2" key={key}>
+                <h3 >{categoria.nombre}</h3>
                 <p>{categoria.descripcion}
             <Link href={`/posts/${categoria.id}`}>
               <a>
