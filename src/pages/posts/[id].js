@@ -7,15 +7,9 @@ const Post = () => {
 
     const router = useRouter();
 
-    // if(router.isFallback){
-    //     return <div className="cargando">Cargando... </div>
-    // }
-    // const { nombre, contenido } = categorias.filter(categoria=>categoria.id==router.query.id);
     const post = categorias.filter(categoria=>categoria.id==router.query.id);
-    //  console.log(post);
-    if(!post){
-        return (<div></div>)
-    }
+
+
     return (
         <Segundario>
             <h2> { post[0].nombre } </h2>
