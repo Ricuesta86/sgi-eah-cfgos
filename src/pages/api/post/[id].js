@@ -8,7 +8,7 @@ export default function postHandler(req, res) {
 
   const post = getPostById(id);
   if(!post){
-    res.status(404);
+    // res.status(404);
     return 
   }
 
