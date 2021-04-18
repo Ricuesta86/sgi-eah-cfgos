@@ -1,47 +1,42 @@
-import { useRouter } from 'next/router'
-
+import Link from 'next/link'
 import Segundario from '../../components/Segundario'
-import { categorias } from '../../profiles'
 
-const Post = () => {
+const Post = ({ post }) => {
+  const { nombre, contenido } = post.post
 
-    const router = useRouter();
-
-    const post = categorias.filter(categoria=>categoria.id==router.query.id);
-
-
-    return (
-        <Segundario>
-            <h2> { post[0].nombre } </h2>
-            <p>{post[0].contenido}</p>
-        </Segundario>
-    )
-};
+  return (
+    <Segundario>
+      <div className="text-right block">
+        <Link href={'/posts'}>
+          <a>Regresar</a>
+        </Link>
+      </div>
+      <h2> {nombre} </h2>
+      <p>{contenido}</p>
+      <div className="text-right block">
+        <Link href={'/posts'}>
+          <a>Regresar</a>
+        </Link>
+      </div>
+      <style jsx>
+        {`
+          .link {
+            align-text: right;
+          }
+        `}
+      </style>
+    </Segundario>
+  )
+}
 
 export default Post
 
-// export async function getStatisPachs(){
+export async function getServerSideProps({ params }) {
+  const server = process.env.SERVER
+  const respuesta = await fetch(`${server}/api/post/${params.id}`)
+  const post = await respuesta.json()
 
-//     const paths= categorias.map(post=>{
-//         return{
-//             params: {
-//                 id: post.id
-//             }
-//         }
-//     });
-
-//     return {
-//         paths,
-//         fallbask: true
-//     }
-// };
-
-
-// export async function getStatisProps({ params }){
-//     const post = categorias.filter(post=>(post.id === params.id))
-
-
-//     return{
-//         props:{ post },
-//     }
-// }
+  return {
+    props: { post }
+  }
+}

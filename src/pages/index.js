@@ -51,7 +51,7 @@ const index = () => {
         {categorias.map((categoria, key) => {
           return (
             <div className="col-3 card p-2 " key={key} >
-              <Link href={`/posts/${categoria.id}`}>
+              <Link href={`/posts/[id]`} as={`/posts/${categoria.id}`}>
                 <a>
                   <p >{categoria.nombre}</p>
                 </a>
