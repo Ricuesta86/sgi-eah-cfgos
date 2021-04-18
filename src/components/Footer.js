@@ -11,11 +11,11 @@ const Footer = () => {
         </div>
         <div className="col-sm-12 col-lg-4 col-12 "><p className="text-white">Desarrollado por :  <span>Ricuesta</span></p></div>
         <div className="col-sm-12 col-lg-4 col-12 ">
-          <a href="https://www.facebook.com/groups/2637132626546045">
-            <img src={`/facebook.svg`} alt="Facebook" className="facebook" />
+          <a href="https://www.facebook.com/EAH-Empresa-de-Aprovechamiento-Hidraulico-Cienfuegos-1239677802846221" target="blank">
+            <img src={`/facebook.svg`} alt="Facebook"  className="facebook" />
           </a>
-          <a href="https://www.youtube.com/channel/UC0oi8uH1vxDcyt7b_3iByew">
-            <img src={`/youtube-icon.svg`} alt="Youtube" className="youtube" />
+          <a href="https://www.youtube.com/channel/UC_bOaPdIMR6jCabTC7vNpPw" target="blank">
+            <img src={`/youtube-icon.svg`} alt="Youtube"  className="youtube" />
           </a>
         </div>
       </div>
